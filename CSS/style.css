@@ -1,0 +1,632 @@
+    /* --------------------------------- Fuente --------------------------------- */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+    /* --------------------------------- General -------------------------------- */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 62.5%;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        max-width: 1200px;
+    }
+    
+    .container {
+        width: 100vw;
+        min-width: 280px;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "menu" "title" "main" "footer";
+    }
+    /* --------------------------------- HEADER --------------------------------- */
+    
+    .container .header {
+        grid-area: header;
+        align-items: center;
+        background-color: #FFD9E0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+    
+    .header__logo {
+        width: 15rem;
+    }
+    
+    .header__logo img {
+        width: 100%;
+    }
+    
+    .header__shopping {
+        font-size: 3rem;
+        color: #fff;
+    }
+    /* ----------------------------------- NAV ---------------------------------- */
+    
+    .container .menu {
+        grid-area: menu;
+        background-color: #e6c2c8;
+        height: 3rem;
+    }
+    
+    .menu ul {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .menu li {
+        list-style-type: none;
+        font-size: 1.1rem;
+        padding: .5rem;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+    }
+    /* --------------------------------- SLIDER --------------------------------- */
+    
+    .container .main {
+        grid-area: main;
+    }
+    
+    .main__slider {
+        display: flex;
+        height: 40vh;
+        position: relative;
+    }
+    
+    .main__slider img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .main__slider figcaption {
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        display: flex;
+        height: 95%;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .figcaption__h1 {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+    
+    .figcaption__p {
+        font-size: 1.2rem;
+        margin: 0.35rem;
+        color: #fff;
+    }
+    /* ---------------------------------FULL FOOTER --------------------------------- */
+    
+    .container .footer {
+        grid-area: footer;
+        background-color: #FFD9E0;
+        display: flex;
+        flex-direction: column;
+    }
+    /* ------------------------------ FOOTER TITLE ------------------------------ */
+    
+    .footer__title {
+        font-size: 2.5rem;
+        color: #fff;
+        text-align: center;
+        margin: .5rem;
+    }
+    /* ------------------------------- FOOTER NAV ------------------------------- */
+    
+    .footer__nav ul {
+        list-style-type: none;
+    }
+    
+    .footer__nav li {
+        margin: .6rem;
+        border-bottom: 1px solid #fff;
+    }
+    
+    .footer__nav a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        padding: .5rem;
+        color: #fff;
+        cursor: pointer;
+    }
+    /* ------------------------------ FOOTER REDES ------------------------------ */
+    
+    .footer__redes {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .footer__redes a {
+        font-size: 3rem;
+        margin: 1rem;
+        color: #fff;
+    }
+    /* ------------------------------ FOOTER PAGOS ------------------------------ */
+    
+    .footer__pagos {
+        display: flex;
+        min-width: 280px;
+    }
+    
+    .footer__pagos img {
+        width: 6rem;
+        padding: .5rem;
+        margin: 1rem auto;
+    }
+    /* -------------------------- COMIENZO TIENDA.HTML ------------------------- */
+    
+    .title {
+        grid-area: title;
+        text-align: center;
+        height: 4rem;
+        background-color: #dabbc0e7;
+    }
+    
+    .title h2 {
+        color: #fff;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+    
+    .container .main {
+        grid-area: main;
+        display: grid;
+        width: 100vw;
+        min-width: 280px;
+        background-color: #FFD9E0;
+    }
+    
+    .main__filtro h4 {
+        font-size: 1.8rem;
+        color: #fff;
+        text-align: center;
+        margin: 1.5rem;
+    }
+    
+    .main__form label {
+        font-size: 1.5rem;
+        text-align: center;
+        color: rgb(196, 41, 41);
+    }
+    
+    .main__form .send {
+        color: #fff;
+        font-size: 1.5rem;
+        background-color: #e6c2c8;
+        padding: .8rem;
+        text-transform: uppercase;
+        border-radius: 1rem;
+        border: 1px solid #b39a9e;
+        margin: 2rem;
+    }
+    
+    .galery__container {
+        display: flex;
+        width: 100vw;
+        min-width: 280px;
+        flex-direction: column;
+    }
+    
+    .main__form {
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        justify-content: space-around;
+        align-content: center;
+    }
+    
+    .galery__container img {
+        width: 100%;
+        height: 55vh;
+        border-radius: 2rem;
+        padding: .8rem;
+    }
+    /* -------------------------- COMIENZO NOVIAS.HTML -------------------------- */
+    
+    .main {
+        grid-area: main;
+        min-width: 280px;
+    }
+    
+    .resumen {
+        background-color: #a4a4a4;
+    }
+    
+    .resumen h3 {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 1.9rem;
+        color: #fff;
+    }
+    
+    .resumen p {
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 1rem;
+        text-align: justify;
+    }
+    
+    .imgBodas {
+        display: flex;
+        width: 100vw;
+        min-width: 280px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .imgBodas img {
+        width: 100vw;
+        height: 45vh;
+    }
+    
+    .articleImg {
+        display: none;
+    }
+    
+    .textForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 280px;
+        background-color: #d1d1d2;
+    }
+    
+    .textForm h3 {
+        font-size: 2rem;
+        margin: 1rem auto;
+        color: #fff;
+    }
+    
+    .textForm p {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 1rem;
+        color: #fff;
+    }
+    
+    .formBodas {
+        width: 100vw;
+        min-width: 280px;
+        padding: 1rem;
+    }
+    
+    .formBodas input,
+    .formBodas label {
+        display: block;
+        width: 100%;
+        margin: .5rem 0;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    
+    .formBodas label {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    
+    .formBodas input:not([type="submit"]) {
+        border: none;
+        border-bottom: 3px solid #FFD9E0;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .formBodas input[type="submit"] {
+        border: none;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: #FFD9E0;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+    /* ------------------------- COMIENZO NOSOTROS.HTML ------------------------- */
+    
+    .container .main {
+        display: flex;
+        flex-direction: column;
+        grid-area: main;
+        min-width: 280px;
+        background-color: #d1d1d2
+    }
+    
+    .nosotros__textos h3 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .nosotros__textos p {
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 1rem;
+    }
+    
+    .nosotros__img {
+        width: 100vw;
+        min-width: 280px;
+    }
+    
+    .nosotros__img img {
+        width: 100%;
+        padding: .8rem;
+        border-radius: 2rem;
+    }
+    /* ----------------------- COMIENZO ENCUENTRANOS.HTML ----------------------- */
+    
+    .container .main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        min-width: 280px;
+        background-color: #d1d1d2;
+    }
+    
+    .main iframe {
+        margin: 1rem;
+        border: none;
+    }
+    
+    .form__encuentranos {
+        width: 100vw;
+        min-width: 280px;
+        padding: 1rem;
+    }
+    
+    .form__encuentranos input,
+    .form__encuentranos label,
+    .form__encuentranos textarea {
+        display: block;
+        width: 100%;
+        margin: .5rem 0;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    
+    .form__encuentranos label {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    
+    .form__encuentranos input:not([type="submit"]),
+    .form__encuentranos textarea {
+        border: none;
+        border-bottom: 3px solid #FFD9E0;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        outline: none;
+        background-color: transparent;
+    }
+    
+    .form__encuentranos input[type="submit"] {
+        border: none;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: #FFD9E0;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+    /* ------------------ COMIENZO MEDIAS QUERIES TABLETS ------------------ */
+    
+    @media (min-width: 768px) {
+        /* --------------------------------- GENERAL -------------------------------- */
+        .container {
+            width: 100vw;
+        }
+        .container .header {
+            justify-content: space-between;
+        }
+        .container .menu {
+            height: 5rem;
+        }
+        .menu li {
+            font-size: 2rem;
+        }
+        .title {
+            font-size: 1.5rem;
+            height: 8rem;
+        }
+        .title h2 {
+            margin-top: 3rem;
+        }
+        .container .footer {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        /* --------------------------- QUERIES INDEX.HTML --------------------------- */
+        .main__slider {
+            height: 60vh;
+        }
+        .figcaption__h1 {
+            font-size: 3rem;
+        }
+        .figcaption__p {
+            font-size: 1.5rem;
+        }
+        /* --------------------------- QUERIES TIENDA.HTML -------------------------- */
+        .container .main__tienda {
+            display: flex;
+            flex-direction: row;
+        }
+        .main .main__filtro {
+            width: 33vw;
+        }
+        .galery__container {
+            display: flex;
+            width: 100vw;
+            min-width: 280px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .galery__container img {
+            height: 36vh;
+            width: 37vw;
+        }
+        /* --------------------------- QUERIES NOVIAS.HTML -------------------------- */
+        .imgBodas {
+            display: flex;
+            flex-direction: row;
+        }
+        .imgBodas img {
+            width: 50vw;
+            height: 60vh;
+            border-radius: 2rem;
+            padding: .8rem;
+        }
+        .formNovias {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .articleImg {
+            display: block;
+        }
+        .articleImg img {
+            width: 40vw;
+            height: 80vh;
+            border-radius: 2rem;
+            padding: 1rem;
+        }
+        .textForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 60vw;
+        }
+        .formBodas {
+            width: 100%;
+        }
+        /* ----------------------- QUERIES NOSOTROS.HTML ----------------------- */
+        .container .main__nosotros {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+        }
+        .nosotros__textos {
+            width: 40vw;
+        }
+        .nosotros__img {
+            width: 60vw;
+        }
+        .nosotros__img img {
+            height: 60vh;
+        }
+        /* --------------------- QUERIES PARA ENCUENTRANOS.HTML --------------------- */
+        .container .main__encuentranos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+        .form__encuentranos,
+        iframe {
+            width: 45vw;
+        }
+    }
+    /* --------------------- COMIENZO MEDIAS QUERIES PARA PC -------------------- */
+    
+    @media (min-width: 992px) {
+        /* --------------------------------- GENERAL -------------------------------- */
+        .container .header {
+            justify-content: space-around;
+        }
+        .menu ul {
+            justify-content: space-evenly;
+        }
+        /* --------------------------- QUERIES INDEX.HTML --------------------------- */
+        .container .main__index {
+            background-color: #fff;
+        }
+        .main__slider {
+            height: 100vh;
+        }
+        .main__slider img {
+            width: 100%;
+            height: auto;
+            padding: 0.8rem;
+            border-radius: 2rem;
+        }
+        .figcaption__h1 {
+            font-size: 4rem;
+        }
+        .figcaption__p {
+            font-size: 2rem;
+        }
+        /* --------------------------- QUERIES TIENDA.HTML -------------------------- */
+        .galery__container img {
+            height: 45vh;
+            width: 25vw;
+        }
+        /* --------------------------- QUERIES NOVIAS.HTML -------------------------- */
+        .presentacion {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .formNovias {
+            width: 90vw;
+        }
+        .resumen {
+            width: 30vw;
+            border-radius: 2rem;
+            padding: .8rem;
+            margin: .8rem;
+        }
+        .textForm {
+            justify-content: space-evenly;
+            width: 60vw;
+        }
+        .imgBodas {
+            width: 60vw;
+        }
+        .imgBodas img {
+            width: 30vw;
+            height: 65vh;
+        }
+        .articleImg {
+            width: 40vw;
+        }
+        .articleImg img {
+            width: 30vw;
+        }
+        /* -------------------------- QUERIES NOSOTROS.HTML ------------------------- */
+        .nosotros__img img {
+            height: 80vh;
+        }
+        .nosotros__textos p {
+            font-size: 1.8rem;
+            text-align: justify;
+        }
+        /* -------------------------- QUERIES ENCUENTRANOS.HTML ------------------------- */
+        .container .main__encuentranos {
+            height: 80vh;
+        }
+        .form__encuentranos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }

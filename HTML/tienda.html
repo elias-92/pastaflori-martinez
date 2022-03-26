@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <title>Tienda</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+
+            <!-- start logo -->
+            <div class="header__logo">
+                <a href="../index.html">
+                    <img src="../IMG/logo-pastaflori.jpg" class="header__img" alt="logo de pastaflori">
+                </a>
+            </div>
+            <!-- end logo -->
+            <div class="header__shopping">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </header>
+
+        <!-- start nav -->
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="tienda.html">Tienda</a>
+                </li>
+                <li>
+                    <a href="novias.html">Novias</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="encuentranos.html">Encuéntranos</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+
+
+        <div class="title">
+            <h2>Tienda</h2>
+        </div>
+        <main class="main main__tienda">
+            <div class="main__filtro">
+                <h4>Filtrar por precio</h4>
+                <form action="" class="main__form">
+                    <label for="precio"> $1000 a $5000</label>
+                    <input type="range" id="precio" name="precio" min="1000" max="5000">
+                    <input class="send" type="submit" value="Filtrar">
+                </form>
+            </div>
+            <!-- --------------------------- galery ---------------------------- -->
+
+            <div class="galery__container">
+                <a href="#">
+                    <img src="../IMG/galery-img1.jpg" alt="imagen de torta">
+                </a>
+
+                <a href="#">
+                    <img src="../IMG/galery-img2.jpg" alt="imagen de torta">
+                </a>
+
+                <a href="#">
+                    <img src="../IMG/galery-img3.jpg" alt="imagen de torta">
+                </a>
+
+                <a href="#">
+                    <img src="../IMG/galery-img4.jpg" alt="imagen de torta">
+                </a>
+
+                <a href="#">
+                    <img src="../IMG/galery-img5.jpg" alt="imagen de torta">
+                </a>
+
+                <a href="#">
+                    <img src="../IMG/galery-img6.jpg" alt="imagen de torta">
+                </a>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <!-- start navegacion footer -->
+            <div class="footer__content">
+                <h4 class="footer__title">Navegación</h4>
+
+                <nav class="footer__nav">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="tienda.html">Tienda</a>
+                        </li>
+                        <li>
+                            <a href="novias.html">Novias</a>
+                        </li>
+                        <li>
+                            <a href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="encuentranos.html">Encuéntranos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end navegacion footer -->
+
+            <!-- start redes sociales footer-->
+            <div class="footer__content">
+                <h4 class="footer__title">¡Seguinos!</h4>
+
+                <section class="footer__redes">
+                    <a href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </section>
+            </div>
+            <!-- end redes sociales footer-->
+
+            <!-- start medios de pagos footer-->
+            <div class="footer__content">
+                <h4 class="footer__title">Medios de Pagos</h4>
+
+                <figure class="footer__pagos">
+                    <img src="../IMG/visa.png" alt="imagen de visa">
+                    <img src="../IMG/mastercard.png" alt="imagen de mastercard">
+                    <img src="../IMG/pagofacil.png" alt="imagen de pagofacil">
+                    <img src="../IMG/rapipago.png" alt="imagen de rapipago">
+                </figure>
+            </div>
+            <!-- end medios de pagos footer-->
+
+        </footer>
+    </div>
+</body>
+
+</html>
