@@ -15,111 +15,33 @@
     
     body {
         font-family: 'Roboto', sans-serif;
-        max-width: 1200px;
     }
     
-    .container {
-        width: 100vw;
+    .container-fluid {
+        overflow: hidden;
         min-width: 280px;
-        max-width: 1200px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "header" "menu" "title" "main" "footer";
     }
     /* --------------------------------- HEADER --------------------------------- */
     
-    .container .header {
-        grid-area: header;
-        align-items: center;
-        background-color: #FFD9E0;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 2rem;
+    .container-fluid .logo {
+        width: 100px;
     }
     
-    .header__logo {
-        width: 15rem;
-    }
-    
-    .header__logo img {
-        width: 100%;
-    }
-    
-    .header__shopping {
-        font-size: 3rem;
-        color: #fff;
-    }
-    /* ----------------------------------- NAV ---------------------------------- */
-    
-    .container .menu {
-        grid-area: menu;
+    .container-fluid .fondo {
         background: rgb(237, 172, 223);
         background: linear-gradient(0deg, rgba(237, 172, 223, 1) 0%, rgba(241, 102, 205, 1) 50%, rgba(148, 57, 130, 1) 100%);
-        height: 3rem;
-    }
-    
-    .menu ul {
-        display: flex;
-        height: 100%;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .menu li {
-        list-style-type: none;
-        font-size: 1.1rem;
-        padding: .5rem;
-    }
-    
-    .menu a {
-        text-decoration: none;
-        color: #fff;
-        cursor: pointer;
     }
     /* --------------------------------- SLIDER --------------------------------- */
     
-    .container .main {
+    .container-fluid .main {
         grid-area: main;
     }
     
-    .main__index .d-none {
-        display: none;
-    }
-    
-    .main__slider {
-        display: flex;
-        height: 40vh;
-        position: relative;
-    }
-    
-    .main__slider img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .main__slider figcaption {
-        position: absolute;
-        text-align: center;
-        width: 100vw;
-        display: flex;
-        height: 95%;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    
-    .figcaption__h1 {
-        color: #fff;
-        font-size: 2.5rem;
-        background: linear-gradient(to right, #ff0000, #9932cc);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-    
-    .figcaption__p {
-        font-size: 1.2rem;
-        margin: 0.35rem;
-        color: #fff;
+    .carousel-caption .color {
+        background: -webkit-linear-gradient(to right, #ff0000, #9932cc);
         background: linear-gradient(to right, #ff0000, #9932cc);
         -webkit-background-clip: text;
         background-clip: text;
@@ -127,12 +49,10 @@
     }
     /* ---------------------------------FULL FOOTER --------------------------------- */
     
-    .container .footer {
+    .container-fluid .footer {
         grid-area: footer;
         background: rgb(237, 172, 223);
         background: linear-gradient(0deg, rgba(237, 172, 223, 1) 0%, rgba(241, 102, 205, 1) 50%, rgba(148, 57, 130, 1) 100%);
-        display: flex;
-        flex-direction: column;
     }
     /* ------------------------------ FOOTER TITLE ------------------------------ */
     
@@ -199,7 +119,7 @@
         margin-top: 1rem;
     }
     
-    .container .main {
+    .container-fluid .main {
         grid-area: main;
         display: grid;
         width: 100vw;
@@ -355,7 +275,7 @@
     }
     /* ------------------------- COMIENZO NOSOTROS.HTML ------------------------- */
     
-    .container .main {
+    .container-fluid .main {
         display: flex;
         flex-direction: column;
         grid-area: main;
@@ -388,7 +308,7 @@
     }
     /* ----------------------- COMIENZO ENCUENTRANOS.HTML ----------------------- */
     
-    .container .main {
+    .container-fluid .main {
         grid-area: main;
         display: flex;
         flex-direction: column;
@@ -446,13 +366,10 @@
     
     @media (min-width: 768px) {
         /* --------------------------------- GENERAL -------------------------------- */
-        .container {
-            width: 100vw;
+        .container-fluid .logo {
+            width: 150px;
         }
-        .container .header {
-            justify-content: space-between;
-        }
-        .container .menu {
+        .container-fluid .menu {
             height: 5rem;
         }
         .menu li {
@@ -465,22 +382,17 @@
         .title h2 {
             margin-top: 3rem;
         }
-        .container .footer {
-            flex-direction: row;
-            justify-content: space-around;
-        }
         /* --------------------------- QUERIES INDEX.HTML --------------------------- */
-        .main__slider {
-            height: 60vh;
+        .carousel-caption .caption-h5 {
+            font-weight: 600;
+            font-size: 5rem;
         }
-        .figcaption__h1 {
-            font-size: 3rem;
-        }
-        .figcaption__p {
-            font-size: 1.5rem;
+        .carousel-caption .caption-p {
+            font-weight: 500;
+            font-size: 2rem
         }
         /* --------------------------- QUERIES TIENDA.HTML -------------------------- */
-        .container .main__tienda {
+        .container-fluid .main__tienda {
             display: flex;
             flex-direction: row;
         }
@@ -534,7 +446,7 @@
             width: 100%;
         }
         /* ----------------------- QUERIES NOSOTROS.HTML ----------------------- */
-        .container .main__nosotros {
+        .container-fluid .main__nosotros {
             display: flex;
             flex-direction: row;
             width: 100vw;
@@ -549,7 +461,7 @@
             height: 60vh;
         }
         /* --------------------- QUERIES PARA ENCUENTRANOS.HTML --------------------- */
-        .container .main__encuentranos {
+        .container-fluid .main__encuentranos {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -563,31 +475,9 @@
     /* --------------------- COMIENZO MEDIAS QUERIES PARA PC -------------------- */
     
     @media (min-width: 992px) {
-        /* --------------------------------- GENERAL -------------------------------- */
-        .container .header {
-            justify-content: space-around;
-        }
-        .menu ul {
-            justify-content: space-evenly;
-        }
         /* --------------------------- QUERIES INDEX.HTML --------------------------- */
-        .container .main__index {
-            background-color: #fff;
-        }
-        .main__slider {
-            height: 100vh;
-        }
-        .main__slider img {
-            width: 100%;
-            height: auto;
-            padding: 0.8rem;
-            border-radius: 2rem;
-        }
-        .figcaption__h1 {
-            font-size: 4rem;
-        }
-        .figcaption__p {
-            font-size: 2rem;
+        .carousel-item img {
+            height: 80vh;
         }
         /* ------------------------- Animacion figcaption de slider ------------------------- */
         .animation {
@@ -721,7 +611,7 @@
             text-align: justify;
         }
         /* -------------------------- QUERIES ENCUENTRANOS.HTML ------------------------- */
-        .container .main__encuentranos {
+        .container-fluid .main__encuentranos {
             height: 80vh;
         }
         .form__encuentranos {
