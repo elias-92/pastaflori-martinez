@@ -24,7 +24,7 @@
         grid-template-columns: 1fr;
         grid-template-areas: "header" "menu" "title" "main" "footer";
     }
-    /* --------------------------------- HEADER --------------------------------- */
+    /* --------------------------------- NAVBAR --------------------------------- */
     
     .container-fluid .logo {
         width: 100px;
@@ -34,7 +34,7 @@
         background: rgb(237, 172, 223);
         background: linear-gradient(0deg, rgba(237, 172, 223, 1) 0%, rgba(241, 102, 205, 1) 50%, rgba(148, 57, 130, 1) 100%);
     }
-    /* --------------------------------- SLIDER --------------------------------- */
+    /* ---------------------------------index SLIDER --------------------------------- */
     
     .container-fluid .main {
         grid-area: main;
@@ -46,6 +46,57 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+    }
+    /* ---------------------------- index miniGaleria --------------------------- */
+    
+    .animacionMobile {
+        text-align: center;
+        padding-top: 5rem;
+    }
+    
+    .animacionMobile h2 {
+        font-size: 3rem;
+        margin: 2rem 0;
+        color: #5a5a5a;
+    }
+    
+    .animacionMobile p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #5a5a5a;
+    }
+    
+    .miniGaleria {
+        display: none;
+    }
+    
+    .animacion {
+        width: 97vw;
+        height: 30vh;
+        margin: 2rem 0;
+        animation-name: animacion;
+        animation-duration: 10s;
+        animation-delay: .35s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes animacion {
+        0% {
+            background: url(../IMG/sliderSecun2.jpg);
+            image-rendering: crisp-edges;
+        }
+        33% {
+            background: url(../IMG/sliderSecun3.jpg);
+            image-rendering: crisp-edges;
+        }
+        68% {
+            background: url(../IMG/sliderSecun4.jpg);
+            image-rendering: crisp-edges;
+        }
+        100% {
+            background: url(../IMG/sliderSecun5.jpg);
+            image-rendering: crisp-edges;
+        }
     }
     /* ---------------------------------FULL FOOTER --------------------------------- */
     
@@ -80,6 +131,10 @@
         color: #fff;
         cursor: pointer;
     }
+    
+    .footer__nav a:hover {
+        color: #5a5a5a;
+    }
     /* ------------------------------ FOOTER REDES ------------------------------ */
     
     .footer__redes {
@@ -91,6 +146,10 @@
         font-size: 3rem;
         margin: 1rem;
         color: #fff;
+    }
+    
+    .footer__redes .fa-instagram:hover {
+        color: #c72407;
     }
     /* ------------------------------ FOOTER PAGOS ------------------------------ */
     
@@ -366,6 +425,9 @@
     
     @media (min-width: 768px) {
         /* --------------------------------- GENERAL -------------------------------- */
+        .animacionMobile {
+            display: none;
+        }
         .container-fluid .logo {
             width: 150px;
         }
@@ -390,6 +452,59 @@
         .carousel-caption .caption-p {
             font-weight: 500;
             font-size: 2rem
+        }
+        .miniGaleria {
+            text-align: center;
+            display: block;
+            width: 100vw;
+            padding: 11rem 0;
+            background-color: #d1d1d2;
+        }
+        .miniGaleria__content {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+        .miniGaleria__content h2 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #5a5a5a;
+        }
+        .miniGaleria__content p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #5a5a5a;
+        }
+        .miniGaleria__content ul {
+            display: flex;
+            padding: 0;
+        }
+        .miniGaleria__content ul li {
+            width: 100vw;
+            list-style-type: none;
+            padding: 1rem;
+        }
+        .miniGaleria__content ul li:first-child {
+            padding-left: 0;
+        }
+        .miniGaleria__content ul img {
+            width: 100%;
+            height: -webkit-fill-available;
+        }
+        .miniGaleria .btn-personalizado {
+            margin-top: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            color: #ffffff;
+            border-radius: .8rem;
+            padding: 1.5rem 4rem;
+            background: rgb(237, 172, 223);
+            background: linear-gradient(0deg, rgba(237, 172, 223, 1) 0%, rgba(241, 102, 205, 1) 50%, rgba(148, 57, 130, 1) 100%);
+        }
+        .miniGaleria .btn-personalizado:hover {
+            box-shadow: 5px 3px 2px 1px rgba(237, 172, 223, 0.69);
         }
         /* --------------------------- QUERIES TIENDA.HTML -------------------------- */
         .container-fluid .main__tienda {
