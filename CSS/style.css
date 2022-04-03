@@ -10,7 +10,7 @@
     }
     
     html {
-        font-size: 62.5%;
+        font-size: 62.0%;
     }
     
     body {
@@ -82,20 +82,16 @@
     
     @keyframes animacion {
         0% {
-            background: url(../IMG/sliderSecun2.jpg);
-            image-rendering: crisp-edges;
+            background: url(../IMG/sliderSecun2.jpg) no-repeat scroll 50% 50%/ contain transparent;
         }
         33% {
-            background: url(../IMG/sliderSecun3.jpg);
-            image-rendering: crisp-edges;
+            background: url(../IMG/sliderSecun3.jpg) no-repeat scroll 50% 50% / contain transparent;
         }
         68% {
-            background: url(../IMG/sliderSecun4.jpg);
-            image-rendering: crisp-edges;
+            background: url(../IMG/sliderSecun4.jpg) no-repeat scroll 50% 50%/ contain transparent;
         }
         100% {
-            background: url(../IMG/sliderSecun5.jpg);
-            image-rendering: crisp-edges;
+            background: url(../IMG/sliderSecun5.jpg) no-repeat scroll 50% 50% / contain transparent;
         }
     }
     /* ---------------------------------FULL FOOTER --------------------------------- */
@@ -227,7 +223,7 @@
     
     .galery__container img {
         width: 100%;
-        height: 55vh;
+        height: 40vh;
         border-radius: 2rem;
         padding: .8rem;
     }
@@ -523,7 +519,7 @@
             justify-content: space-around;
         }
         .galery__container img {
-            height: 36vh;
+            height: 30vh;
             width: 37vw;
         }
         /* --------------------------- QUERIES NOVIAS.HTML -------------------------- */
@@ -620,7 +616,7 @@
             height: 45vh;
             width: 25vw;
         }
-        /* ---------------------- Transition en el hover de imagenes ---------------------- */
+        /* Transition en el hover de imagenes */
         .galery__picture {
             position: relative;
             cursor: pointer;
@@ -647,7 +643,7 @@
         .galery__picture:hover::before {
             transform: scale(1) rotate(360deg);
         }
-        /* -------------------- Animacion en boton de formulario -------------------- */
+        /* Animacion en boton de formulario  */
         .animation-btn:hover {
             -webkit-animation: animation-btn 1s;
             animation: animation-btn 1s;
@@ -717,9 +713,52 @@
         .articleImg img {
             width: 30vw;
         }
+        /* animacion en boton de formulario */
+        .form__btn:hover {
+            -webkit-animation: animation-btn 1s;
+            animation: animation-btn 1s;
+        }
+        @keyframes animation-btn {
+            0%,
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transform-origin: 50% 100%;
+                transform-origin: 50% 100%;
+            }
+            10% {
+                -webkit-transform: rotate(2deg);
+                transform: rotate(2deg);
+            }
+            20%,
+            40%,
+            60% {
+                -webkit-transform: rotate(-4deg);
+                transform: rotate(-4deg);
+            }
+            30%,
+            50%,
+            70% {
+                -webkit-transform: rotate(4deg);
+                transform: rotate(4deg);
+            }
+            80% {
+                -webkit-transform: rotate(-2deg);
+                transform: rotate(-2deg);
+            }
+            90% {
+                -webkit-transform: rotate(2deg);
+                transform: rotate(2deg);
+            }
+        }
         /* -------------------------- QUERIES NOSOTROS.HTML ------------------------- */
+        /* scale en imagen */
         .nosotros__img img {
             height: 80vh;
+            transition: all .8s ease-in-out;
+        }
+        .nosotros__img img:hover {
+            transform: scale(.98);
         }
         .nosotros__textos p {
             font-size: 1.8rem;
