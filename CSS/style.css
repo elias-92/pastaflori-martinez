@@ -75,8 +75,8 @@
         height: 30vh;
         margin: 2rem 0;
         animation-name: animacion;
-        animation-duration: 10s;
-        animation-delay: .35s;
+        animation-duration: 12s;
+        animation-delay: .5s;
         animation-iteration-count: infinite;
     }
     
@@ -278,13 +278,13 @@
     }
     
     .textForm h3 {
-        font-size: 2rem;
+        font-size: 4rem;
         margin: 1rem auto;
         color: #fff;
     }
     
     .textForm p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: justify;
         padding: 1rem;
         color: #fff;
@@ -616,6 +616,12 @@
             height: 45vh;
             width: 25vw;
         }
+        .main__filtro .send {
+            font-weight: 600;
+        }
+        .main__filtro .send:hover {
+            color: #9932cc;
+        }
         /* Transition en el hover de imagenes */
         .galery__picture {
             position: relative;
@@ -643,7 +649,7 @@
         .galery__picture:hover::before {
             transform: scale(1) rotate(360deg);
         }
-        /* Animacion en boton de formulario  */
+        /* Animacion en boton de formularios  */
         .animation-btn:hover {
             -webkit-animation: animation-btn 1s;
             animation: animation-btn 1s;
@@ -713,43 +719,12 @@
         .articleImg img {
             width: 30vw;
         }
-        /* animacion en boton de formulario */
-        .form__btn:hover {
-            -webkit-animation: animation-btn 1s;
-            animation: animation-btn 1s;
+        .formBodas input[type="submit"] {
+            font-size: 2rem;
+            font-weight: 600;
         }
-        @keyframes animation-btn {
-            0%,
-            100% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-                -webkit-transform-origin: 50% 100%;
-                transform-origin: 50% 100%;
-            }
-            10% {
-                -webkit-transform: rotate(2deg);
-                transform: rotate(2deg);
-            }
-            20%,
-            40%,
-            60% {
-                -webkit-transform: rotate(-4deg);
-                transform: rotate(-4deg);
-            }
-            30%,
-            50%,
-            70% {
-                -webkit-transform: rotate(4deg);
-                transform: rotate(4deg);
-            }
-            80% {
-                -webkit-transform: rotate(-2deg);
-                transform: rotate(-2deg);
-            }
-            90% {
-                -webkit-transform: rotate(2deg);
-                transform: rotate(2deg);
-            }
+        .formBodas input[type="submit"]:hover {
+            color: #9932cc;
         }
         /* -------------------------- QUERIES NOSOTROS.HTML ------------------------- */
         /* scale en imagen */
@@ -772,5 +747,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+        }
+        .form__encuentranos input[type="submit"] {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .form__encuentranos input[type="submit"]:hover {
+            color: #9932cc;
         }
     }
