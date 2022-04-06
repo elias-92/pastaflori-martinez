@@ -1,0 +1,56 @@
+.container-fluid {
+    .footer {
+        grid-area: footer;
+        background: #edacdf;
+        background: linear-gradient(0deg, #edacdf 0%, #f166cd 50%, #943982 100%);
+        .footer__title {
+            font-size: 2.5rem;
+            color: $color-white;
+            text-align: center;
+            margin: .5rem;
+        }
+        .footer__nav {
+            ul {
+                list-style-type: none;
+                li {
+                    margin: .6rem;
+                    border-bottom: 1px solid $color-white;
+                    a {
+                        text-decoration: none;
+                        font-size: 1.6rem;
+                        padding: .5rem;
+                        color: $color-white;
+                        cursor: pointer;
+                        &:hover {
+                            color: $color-darkGrey;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__redes {
+            display: flex;
+            justify-content: space-around;
+            a {
+                font-size: 3rem;
+                margin: 1rem;
+                color: $color-white;
+            }
+            .fa-instagram {
+                &:hover {
+                    color: $color-instagram;
+                }
+            }
+        }
+        .footer__pagos {
+            display: flex;
+            min-width: 280px;
+            text-align: center;
+            img {
+                width: 6rem;
+                padding: .5rem;
+                margin: 1rem auto;
+            }
+        }
+    }
+}

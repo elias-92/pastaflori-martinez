@@ -1,0 +1,12 @@
+.container-fluid {
+    .logo {
+        width: 100px;
+        @include tablets {
+            width: 150px;
+        }
+    }
+    .fondo {
+        background: #edacdf;
+        background: linear-gradient(0deg, #edacdf 0%, #f166cd 50%, #943982 100%);
+    }
+}

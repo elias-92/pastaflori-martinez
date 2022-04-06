@@ -1,0 +1,144 @@
+.container-fluid {
+    .main__tienda {
+        background-color: $color-fondo--main;
+        .main__filtro {
+            h4 {
+                font-size: 1.8rem;
+                color: $color-white;
+                text-align: center;
+                margin: 1.5rem;
+            }
+            .main__form {
+                display: flex;
+                flex-direction: column;
+                height: 10rem;
+                justify-content: space-around;
+                align-content: center;
+                label {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    color: #c42929;
+                }
+                .send {
+                    color: $color-white;
+                    font-size: 1.5rem;
+                    background-color: $color-btn;
+                    padding: .8rem;
+                    text-transform: uppercase;
+                    border-radius: 1rem;
+                    border: none;
+                    margin: 2rem;
+                    @include desktop {
+                        font-weight: 600;
+                        &:hover {
+                            color: $color-btn-hover;
+                        }
+                    }
+                }
+                .animation-btn {
+                    @include desktop {
+                        &:hover {
+                            -webkit-animation: animation-btn 1s;
+                            animation: animation-btn 1s;
+                        }
+                        @keyframes animation-btn {
+                            0%,
+                            100% {
+                                -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                                -webkit-transform-origin: 50% 100%;
+                                transform-origin: 50% 100%;
+                            }
+                            10% {
+                                -webkit-transform: rotate(2deg);
+                                transform: rotate(2deg);
+                            }
+                            20%,
+                            40%,
+                            60% {
+                                -webkit-transform: rotate(-4deg);
+                                transform: rotate(-4deg);
+                            }
+                            30%,
+                            50%,
+                            70% {
+                                -webkit-transform: rotate(4deg);
+                                transform: rotate(4deg);
+                            }
+                            80% {
+                                -webkit-transform: rotate(-2deg);
+                                transform: rotate(-2deg);
+                            }
+                            90% {
+                                -webkit-transform: rotate(2deg);
+                                transform: rotate(2deg);
+                            }
+                        }
+                    }
+                }
+            }
+            @include tablets {
+                width: 30vw;
+            }
+        }
+        .galery__container {
+            display: flex;
+            width: 100vw;
+            min-width: 280px;
+            flex-direction: column;
+            @include tablets {
+                display: flex;
+                width: 70vw;
+                min-width: 280px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            img {
+                width: 100%;
+                height: 40vh;
+                border-radius: 2rem;
+                padding: .8rem;
+                @include tablets {
+                    height: 27vh;
+                    width: 30vw;
+                }
+                @include desktop {
+                    height: 40vh;
+                    width: 20vw;
+                }
+            }
+            .galery__picture {
+                @include desktop {
+                    position: relative;
+                    cursor: pointer;
+                    overflow: hidden;
+                    &::before {
+                        border-radius: 1.2rem;
+                        margin: 0.8rem;
+                        content: "Ver mas";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #e6c2c8d2;
+                        transform: scale(0);
+                        transition: transform .5s;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 3rem;
+                        color: #fff;
+                    }
+                    &:hover::before {
+                        transform: scale(1) rotate(360deg);
+                    }
+                }
+            }
+        }
+        @include tablets {
+            @include d-row;
+        }
+    }
+}

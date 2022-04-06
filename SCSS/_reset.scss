@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    overflow: hidden;
+    min-width: 280px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "menu" "title" "main" "footer";
+}

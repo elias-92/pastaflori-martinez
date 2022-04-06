@@ -1,0 +1,36 @@
+//colores
+$color-fondo--main: #d1d1d2;
+$color-fondo--title: #dabbc0c7;
+$color-darkGrey: #5a5a5a;
+$color-white: #fff;
+$color-grey: #a4a4a4;
+$color-btn: #ffd9e0;
+$color-btn-hover: #9932cc;
+$color-instagram: #c72407;
+$bg-color-imgTienda: #e6c2c8d2;
+//mixin
+@mixin tablets {
+    @media (min-width: 768px) {
+        @content
+    }
+}
+
+;
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content
+    }
+}
+
+;
+@mixin display {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+;
+@mixin d-row {
+    display: flex;
+    flex-direction: row;
+}

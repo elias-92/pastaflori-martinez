@@ -1,0 +1,44 @@
+.animacionMobile {
+    text-align: center;
+    padding-top: 5rem;
+    h2 {
+        font-size: 3rem;
+        margin: 2rem 0;
+        color: $color-darkGrey;
+    }
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: $color-darkGrey;
+    }
+    .animacion {
+        width: 97vw;
+        height: 30vh;
+        margin: 2rem 0;
+        animation-name: animacion;
+        animation-duration: 12s;
+        animation-delay: .5s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes animacion {
+        0% {
+            background: url(../IMG/sliderSecun2.jpg) no-repeat scroll 50% 50%/contain transparent;
+        }
+        33% {
+            background: url(../IMG/sliderSecun3.jpg) no-repeat scroll 50% 50%/contain transparent;
+        }
+        68% {
+            background: url(../IMG/sliderSecun4.jpg) no-repeat scroll 50% 50%/contain transparent;
+        }
+        100% {
+            background: url(../IMG/sliderSecun5.jpg) no-repeat scroll 50% 50%/contain transparent;
+        }
+    }
+    @include tablets {
+        display: none;
+    }
+}
+
+.minigaleria {
+    display: none;
+}

@@ -1,0 +1,56 @@
+.container-fluid {
+    .main {
+        grid-area: main;
+        background-color: $color-fondo--main;
+    }
+    .carousel-item {
+        .carousel-caption {
+            .color {
+                background: -webkit-linear-gradient(to right, #ff0000, #9932cc);
+                background: linear-gradient(to right, #ff0000, #9932cc);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+            .caption-h5 {
+                @include tablets {
+                    font-weight: 600;
+                    font-size: 5rem;
+                }
+            }
+            .caption-p {
+                @include tablets {
+                    font-weight: 500;
+                    font-size: 2rem;
+                }
+            }
+        }
+        img {
+            @include desktop {
+                height: 80vh;
+            }
+        }
+        .animation {
+            @include desktop {
+                -webkit-animation: animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+                animation: animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+                @keyframes animation {
+                    0% {
+                        letter-spacing: 1em;
+                        -webkit-transform: translateZ(400px) translateY(-300px);
+                        transform: translateZ(400px) translateY(-300px);
+                        opacity: 0;
+                    }
+                    40% {
+                        opacity: 0.6;
+                    }
+                    100% {
+                        -webkit-transform: translateZ(0) translateY(0);
+                        transform: translateZ(0) translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

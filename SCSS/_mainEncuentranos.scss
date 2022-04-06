@@ -1,0 +1,119 @@
+.container-fluid {
+    .main {
+        grid-area: main;
+    }
+    .main__encuentranos {
+        @include tablets {
+            height: 50vh;
+        }
+        iframe {
+            height: 30vh;
+            border: none;
+            width: 100vw;
+            @include tablets {
+                width: 45vw;
+                height: 100%;
+            }
+        }
+        .form__encuentranos {
+            width: 100vw;
+            min-width: 280px;
+            padding: 1rem;
+            input,
+            label,
+            textarea {
+                display: block;
+                width: 100%;
+                margin: .5rem 0;
+                font-size: 1.5rem;
+                color: $color-white;
+            }
+            label {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+            input:not([type="submit"]),
+            textarea {
+                border: none;
+                border-bottom: 3px solid $color-btn;
+                margin-bottom: 1rem;
+                font-size: 2rem;
+                outline: none;
+                background-color: transparent;
+            }
+            input[type="submit"] {
+                border: none;
+                padding: 1rem;
+                font-size: 1.5rem;
+                background-color: $color-btn;
+                color: $color-white;
+                cursor: pointer;
+                border-radius: 2rem;
+                @include desktop {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    &:hover {
+                        color: $color-btn-hover;
+                    }
+                }
+            }
+            .animation-btn {
+                @include desktop {
+                    &:hover {
+                        -webkit-animation: animation-btn 1s;
+                        animation: animation-btn 1s;
+                    }
+                    @keyframes animation-btn {
+                        0%,
+                        100% {
+                            -webkit-transform: rotate(0deg);
+                            transform: rotate(0deg);
+                            -webkit-transform-origin: 50% 100%;
+                            transform-origin: 50% 100%;
+                        }
+                        10% {
+                            -webkit-transform: rotate(2deg);
+                            transform: rotate(2deg);
+                        }
+                        20%,
+                        40%,
+                        60% {
+                            -webkit-transform: rotate(-4deg);
+                            transform: rotate(-4deg);
+                        }
+                        30%,
+                        50%,
+                        70% {
+                            -webkit-transform: rotate(4deg);
+                            transform: rotate(4deg);
+                        }
+                        80% {
+                            -webkit-transform: rotate(-2deg);
+                            transform: rotate(-2deg);
+                        }
+                        90% {
+                            -webkit-transform: rotate(2deg);
+                            transform: rotate(2deg);
+                        }
+                    }
+                }
+            }
+            @include tablets {
+                width: 45vw;
+            }
+            @include desktop {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
+        @include tablets {
+            @include d-row;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+        @include desktop {
+            height: 80vh;
+        }
+    }
+}

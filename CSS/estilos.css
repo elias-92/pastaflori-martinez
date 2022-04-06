@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.container-fluid {
+  overflow: hidden;
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "menu" "title" "main" "footer"; }
+
+.container-fluid .logo {
+  width: 100px; }
+  @media (min-width: 768px) {
+    .container-fluid .logo {
+      width: 150px; } }
+
+.container-fluid .fondo {
+  background: #edacdf;
+  background: linear-gradient(0deg, #edacdf 0%, #f166cd 50%, #943982 100%); }
+
+.container-fluid .main {
+  grid-area: main;
+  background-color: #d1d1d2; }
+
+.container-fluid .carousel-item .carousel-caption .color {
+  background: -webkit-linear-gradient(to right, #ff0000, #9932cc);
+  background: linear-gradient(to right, #ff0000, #9932cc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+
+@media (min-width: 768px) {
+  .container-fluid .carousel-item .carousel-caption .caption-h5 {
+    font-weight: 600;
+    font-size: 5rem; } }
+
+@media (min-width: 768px) {
+  .container-fluid .carousel-item .carousel-caption .caption-p {
+    font-weight: 500;
+    font-size: 2rem; } }
+
+@media (min-width: 992px) {
+  .container-fluid .carousel-item img {
+    height: 80vh; } }
+
+@media (min-width: 992px) {
+  .container-fluid .carousel-item .animation {
+    -webkit-animation: animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: animation 1s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+  @keyframes animation {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(-300px);
+      transform: translateZ(400px) translateY(-300px);
+      opacity: 0; }
+    40% {
+      opacity: 0.6; }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1; } } }
+
+.animacionMobile {
+  text-align: center;
+  padding-top: 5rem; }
+  .animacionMobile h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: #5a5a5a; }
+  .animacionMobile p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #5a5a5a; }
+  .animacionMobile .animacion {
+    width: 97vw;
+    height: 30vh;
+    margin: 2rem 0;
+    animation-name: animacion;
+    animation-duration: 12s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite; }
+
+@keyframes animacion {
+  0% {
+    background: url(../IMG/sliderSecun2.jpg) no-repeat scroll 50% 50%/contain transparent; }
+  33% {
+    background: url(../IMG/sliderSecun3.jpg) no-repeat scroll 50% 50%/contain transparent; }
+  68% {
+    background: url(../IMG/sliderSecun4.jpg) no-repeat scroll 50% 50%/contain transparent; }
+  100% {
+    background: url(../IMG/sliderSecun5.jpg) no-repeat scroll 50% 50%/contain transparent; } }
+  @media (min-width: 768px) {
+    .animacionMobile {
+      display: none; } }
+
+.minigaleria {
+  display: none; }
+
+.container-fluid .footer {
+  grid-area: footer;
+  background: #edacdf;
+  background: linear-gradient(0deg, #edacdf 0%, #f166cd 50%, #943982 100%); }
+  .container-fluid .footer .footer__title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin: .5rem; }
+  .container-fluid .footer .footer__nav ul {
+    list-style-type: none; }
+    .container-fluid .footer .footer__nav ul li {
+      margin: .6rem;
+      border-bottom: 1px solid #fff; }
+      .container-fluid .footer .footer__nav ul li a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        padding: .5rem;
+        color: #fff;
+        cursor: pointer; }
+        .container-fluid .footer .footer__nav ul li a:hover {
+          color: #5a5a5a; }
+  .container-fluid .footer .footer__redes {
+    display: flex;
+    justify-content: space-around; }
+    .container-fluid .footer .footer__redes a {
+      font-size: 3rem;
+      margin: 1rem;
+      color: #fff; }
+    .container-fluid .footer .footer__redes .fa-instagram:hover {
+      color: #c72407; }
+  .container-fluid .footer .footer__pagos {
+    display: flex;
+    min-width: 280px;
+    text-align: center; }
+    .container-fluid .footer .footer__pagos img {
+      width: 6rem;
+      padding: .5rem;
+      margin: 1rem auto; }
+
+.container-fluid .title {
+  grid-area: title;
+  text-align: center;
+  height: 4rem;
+  background-color: #dabbc0c7; }
+  @media (min-width: 768px) {
+    .container-fluid .title {
+      font-size: 1.5rem;
+      height: 8rem; } }
+  .container-fluid .title h2 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 1rem; }
+    @media (min-width: 768px) {
+      .container-fluid .title h2 {
+        margin-top: 3rem; } }
+
+.container-fluid .main__tienda {
+  background-color: #d1d1d2; }
+  .container-fluid .main__tienda .main__filtro h4 {
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: center;
+    margin: 1.5rem; }
+  .container-fluid .main__tienda .main__filtro .main__form {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    justify-content: space-around;
+    align-content: center; }
+    .container-fluid .main__tienda .main__filtro .main__form label {
+      font-size: 1.5rem;
+      text-align: center;
+      color: #c42929; }
+    .container-fluid .main__tienda .main__filtro .main__form .send {
+      color: #fff;
+      font-size: 1.5rem;
+      background-color: #ffd9e0;
+      padding: .8rem;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      border: none;
+      margin: 2rem; }
+      @media (min-width: 992px) {
+        .container-fluid .main__tienda .main__filtro .main__form .send {
+          font-weight: 600; }
+          .container-fluid .main__tienda .main__filtro .main__form .send:hover {
+            color: #9932cc; } }
+    @media (min-width: 992px) {
+      .container-fluid .main__tienda .main__filtro .main__form .animation-btn:hover {
+        -webkit-animation: animation-btn 1s;
+        animation: animation-btn 1s; }
+      @keyframes animation-btn {
+        0%,
+        100% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%; }
+        10% {
+          -webkit-transform: rotate(2deg);
+          transform: rotate(2deg); }
+        20%,
+        40%,
+        60% {
+          -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg); }
+        30%,
+        50%,
+        70% {
+          -webkit-transform: rotate(4deg);
+          transform: rotate(4deg); }
+        80% {
+          -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg); }
+        90% {
+          -webkit-transform: rotate(2deg);
+          transform: rotate(2deg); } } }
+  @media (min-width: 768px) {
+    .container-fluid .main__tienda .main__filtro {
+      width: 30vw; } }
+  .container-fluid .main__tienda .galery__container {
+    display: flex;
+    width: 100vw;
+    min-width: 280px;
+    flex-direction: column; }
+    @media (min-width: 768px) {
+      .container-fluid .main__tienda .galery__container {
+        display: flex;
+        width: 70vw;
+        min-width: 280px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; } }
+    .container-fluid .main__tienda .galery__container img {
+      width: 100%;
+      height: 40vh;
+      border-radius: 2rem;
+      padding: .8rem; }
+      @media (min-width: 768px) {
+        .container-fluid .main__tienda .galery__container img {
+          height: 27vh;
+          width: 30vw; } }
+      @media (min-width: 992px) {
+        .container-fluid .main__tienda .galery__container img {
+          height: 40vh;
+          width: 20vw; } }
+    @media (min-width: 992px) {
+      .container-fluid .main__tienda .galery__container .galery__picture {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden; }
+        .container-fluid .main__tienda .galery__container .galery__picture::before {
+          border-radius: 1.2rem;
+          margin: 0.8rem;
+          content: "Ver mas";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: #e6c2c8d2;
+          transform: scale(0);
+          transition: transform .5s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 3rem;
+          color: #fff; }
+        .container-fluid .main__tienda .galery__container .galery__picture:hover::before {
+          transform: scale(1) rotate(360deg); } }
+  @media (min-width: 768px) {
+    .container-fluid .main__tienda {
+      display: flex;
+      flex-direction: row; } }
+
+.container-fluid .main {
+  grid-area: main; }
+  .container-fluid .main .presentacion .resumen {
+    background-color: #a4a4a4; }
+    .container-fluid .main .presentacion .resumen h3 {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      color: #fff; }
+    .container-fluid .main .presentacion .resumen p {
+      font-size: 2rem;
+      color: #fff;
+      padding: 2rem;
+      text-align: justify; }
+    @media (min-width: 992px) {
+      .container-fluid .main .presentacion .resumen {
+        width: 30vw;
+        border-radius: 2rem;
+        padding: .8rem;
+        margin: .8rem; } }
+  .container-fluid .main .presentacion .imgBodas {
+    display: flex;
+    width: 100vw;
+    min-width: 280px;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .container-fluid .main .presentacion .imgBodas {
+        display: flex;
+        flex-direction: row; } }
+    @media (min-width: 992px) {
+      .container-fluid .main .presentacion .imgBodas {
+        width: 60vw; } }
+    .container-fluid .main .presentacion .imgBodas img {
+      width: 100vw;
+      height: 45vh;
+      margin-bottom: 1rem; }
+      @media (min-width: 768px) {
+        .container-fluid .main .presentacion .imgBodas img {
+          width: 50vw;
+          height: 60vh;
+          border-radius: 2rem;
+          padding: .8rem; } }
+      @media (min-width: 992px) {
+        .container-fluid .main .presentacion .imgBodas img {
+          width: 30vw;
+          height: 65vh; } }
+  @media (min-width: 992px) {
+    .container-fluid .main .presentacion {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }
+  .container-fluid .main .formNovias .articleImg {
+    display: none; }
+    @media (min-width: 768px) {
+      .container-fluid .main .formNovias .articleImg {
+        display: block; }
+        .container-fluid .main .formNovias .articleImg img {
+          width: 40vw;
+          height: 80vh;
+          border-radius: 2rem;
+          padding: 1rem; } }
+    @media (min-width: 992px) {
+      .container-fluid .main .formNovias .articleImg {
+        width: 40vw; }
+        .container-fluid .main .formNovias .articleImg img {
+          width: 30vw; } }
+  @media (min-width: 768px) {
+    .container-fluid .main .formNovias {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }
+  @media (min-width: 992px) {
+    .container-fluid .main .formNovias {
+      width: 90vw; } }
+  .container-fluid .main .textForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 280px;
+    background-color: #d1d1d2; }
+    @media (min-width: 768px) {
+      .container-fluid .main .textForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 60vw; } }
+    .container-fluid .main .textForm h3 {
+      font-size: 3rem;
+      margin: 1rem auto;
+      color: #fff; }
+    .container-fluid .main .textForm p {
+      font-size: 2rem;
+      text-align: justify;
+      padding: 2rem;
+      color: #fff; }
+    .container-fluid .main .textForm .formBodas {
+      width: 100vw;
+      min-width: 280px;
+      padding: 1rem; }
+      .container-fluid .main .textForm .formBodas input,
+      .container-fluid .main .textForm .formBodas label {
+        display: block;
+        width: 100%;
+        margin: .5rem 0;
+        font-size: 1.5rem;
+        color: #fff; }
+      .container-fluid .main .textForm .formBodas label {
+        font-size: 1.5rem;
+        text-transform: uppercase; }
+      .container-fluid .main .textForm .formBodas input:not([type="submit"]) {
+        border: none;
+        border-bottom: 3px solid #ffd9e0;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        outline: none;
+        background-color: transparent; }
+      .container-fluid .main .textForm .formBodas input[type="submit"] {
+        border: none;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: #ffd9e0;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 2rem; }
+        @media (min-width: 992px) {
+          .container-fluid .main .textForm .formBodas input[type="submit"] {
+            font-size: 2rem;
+            font-weight: 600; }
+            .container-fluid .main .textForm .formBodas input[type="submit"]:hover {
+              color: #9932cc; } }
+      @media (min-width: 992px) {
+        .container-fluid .main .textForm .formBodas .animation-btn:hover {
+          -webkit-animation: animation-btn 1s;
+          animation: animation-btn 1s; }
+        @keyframes animation-btn {
+          0%,
+          100% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%; }
+          10% {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); }
+          20%,
+          40%,
+          60% {
+            -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
+          30%,
+          50%,
+          70% {
+            -webkit-transform: rotate(4deg);
+            transform: rotate(4deg); }
+          80% {
+            -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg); }
+          90% {
+            -webkit-transform: rotate(2deg);
+            transform: rotate(2deg); } } }
+      @media (min-width: 768px) {
+        .container-fluid .main .textForm .formBodas {
+          width: 100%; } }
+    @media (min-width: 992px) {
+      .container-fluid .main .textForm {
+        justify-content: space-evenly;
+        width: 60vw; } }
+
+.container-fluid .main {
+  grid-area: main; }
+
+@media (min-width: 768px) {
+  .container-fluid .main__nosotros {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; } }
+
+@media (min-width: 992px) {
+  .container-fluid .main__nosotros {
+    flex-direction: row; } }
+
+@media (min-width: 992px) {
+  .container-fluid .main__nosotros .nosotros__textos {
+    width: 40vw; } }
+
+.container-fluid .main__nosotros .nosotros__textos h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff; }
+
+.container-fluid .main__nosotros .nosotros__textos p {
+  font-size: 2rem;
+  color: #fff;
+  padding: 2rem;
+  text-align: justify; }
+  @media (min-width: 992px) {
+    .container-fluid .main__nosotros .nosotros__textos p {
+      font-size: 1.8rem;
+      text-align: justify; } }
+
+.container-fluid .main__nosotros .nosotros__img {
+  width: 71vw;
+  min-width: 280px; }
+  .container-fluid .main__nosotros .nosotros__img img {
+    width: 100%;
+    padding: .8rem;
+    border-radius: 2rem;
+    margin-right: .8rem; }
+    @media (min-width: 992px) {
+      .container-fluid .main__nosotros .nosotros__img img {
+        height: 35vw;
+        width: 61vw;
+        transition: all .8s ease-in-out; }
+        .container-fluid .main__nosotros .nosotros__img img:hover {
+          transform: scale(0.98); } }
+
+.container-fluid .main {
+  grid-area: main; }
+
+@media (min-width: 768px) {
+  .container-fluid .main__encuentranos {
+    height: 50vh; } }
+
+.container-fluid .main__encuentranos iframe {
+  height: 30vh;
+  border: none;
+  width: 100vw; }
+  @media (min-width: 768px) {
+    .container-fluid .main__encuentranos iframe {
+      width: 45vw;
+      height: 100%; } }
+
+.container-fluid .main__encuentranos .form__encuentranos {
+  width: 100vw;
+  min-width: 280px;
+  padding: 1rem; }
+  .container-fluid .main__encuentranos .form__encuentranos input,
+  .container-fluid .main__encuentranos .form__encuentranos label,
+  .container-fluid .main__encuentranos .form__encuentranos textarea {
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
+    font-size: 1.5rem;
+    color: #fff; }
+  .container-fluid .main__encuentranos .form__encuentranos label {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .container-fluid .main__encuentranos .form__encuentranos input:not([type="submit"]),
+  .container-fluid .main__encuentranos .form__encuentranos textarea {
+    border: none;
+    border-bottom: 3px solid #ffd9e0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    outline: none;
+    background-color: transparent; }
+  .container-fluid .main__encuentranos .form__encuentranos input[type="submit"] {
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #ffd9e0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2rem; }
+    @media (min-width: 992px) {
+      .container-fluid .main__encuentranos .form__encuentranos input[type="submit"] {
+        font-size: 2rem;
+        font-weight: 600; }
+        .container-fluid .main__encuentranos .form__encuentranos input[type="submit"]:hover {
+          color: #9932cc; } }
+  @media (min-width: 992px) {
+    .container-fluid .main__encuentranos .form__encuentranos .animation-btn:hover {
+      -webkit-animation: animation-btn 1s;
+      animation: animation-btn 1s; }
+    @keyframes animation-btn {
+      0%,
+      100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%; }
+      10% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg); }
+      20%,
+      40%,
+      60% {
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg); }
+      30%,
+      50%,
+      70% {
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg); }
+      80% {
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg); }
+      90% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg); } } }
+  @media (min-width: 768px) {
+    .container-fluid .main__encuentranos .form__encuentranos {
+      width: 45vw; } }
+  @media (min-width: 992px) {
+    .container-fluid .main__encuentranos .form__encuentranos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; } }
+
+@media (min-width: 768px) {
+  .container-fluid .main__encuentranos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem; } }
+
+@media (min-width: 992px) {
+  .container-fluid .main__encuentranos {
+    height: 80vh; } }

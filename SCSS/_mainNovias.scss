@@ -1,0 +1,200 @@
+.container-fluid {
+    .main {
+        grid-area: main;
+        .presentacion {
+            .resumen {
+                background-color: $color-grey;
+                h3 {
+                    text-align: center;
+                    padding: 2rem 0;
+                    font-size: 2.5rem;
+                    color: $color-white;
+                }
+                p {
+                    font-size: 2rem;
+                    color: $color-white;
+                    padding: 2rem;
+                    text-align: justify;
+                }
+                @include desktop {
+                    width: 30vw;
+                    border-radius: 2rem;
+                    padding: .8rem;
+                    margin: .8rem;
+                }
+            }
+            .imgBodas {
+                display: flex;
+                width: 100vw;
+                min-width: 280px;
+                flex-direction: column;
+                align-items: center;
+                @include tablets {
+                    @include d-row;
+                }
+                @include desktop {
+                    width: 60vw;
+                }
+                img {
+                    width: 100vw;
+                    height: 45vh;
+                    margin-bottom: 1rem;
+                    @include tablets {
+                        width: 50vw;
+                        height: 60vh;
+                        border-radius: 2rem;
+                        padding: .8rem;
+                    }
+                    @include desktop {
+                        width: 30vw;
+                        height: 65vh
+                    }
+                }
+            }
+            @include desktop {
+                @include d-row;
+                justify-content: space-around;
+            }
+        }
+        .formNovias {
+            .articleImg {
+                display: none;
+                @include tablets {
+                    display: block;
+                    img {
+                        width: 40vw;
+                        height: 80vh;
+                        border-radius: 2rem;
+                        padding: 1rem;
+                    }
+                }
+                @include desktop {
+                    width: 40vw;
+                    img {
+                        width: 30vw;
+                    }
+                }
+            }
+            @include tablets {
+                @include d-row;
+                justify-content: space-around;
+            }
+            @include desktop {
+                width: 90vw;
+            }
+        }
+        .textForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 280px;
+            background-color: $color-fondo--main;
+            @include tablets {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 60vw;
+            }
+            h3 {
+                font-size: 3rem;
+                margin: 1rem auto;
+                color: $color-white;
+            }
+            p {
+                font-size: 2rem;
+                text-align: justify;
+                padding: 2rem;
+                color: $color-white;
+            }
+            .formBodas {
+                width: 100vw;
+                min-width: 280px;
+                padding: 1rem;
+                input,
+                label {
+                    display: block;
+                    width: 100%;
+                    margin: .5rem 0;
+                    font-size: 1.5rem;
+                    color: $color-white;
+                }
+                label {
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                }
+                input:not([type="submit"]) {
+                    border: none;
+                    border-bottom: 3px solid $color-btn;
+                    margin-bottom: 1rem;
+                    font-size: 2rem;
+                    outline: none;
+                    background-color: transparent;
+                }
+                input[type="submit"] {
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    background-color: $color-btn;
+                    color: $color-white;
+                    cursor: pointer;
+                    border-radius: 2rem;
+                    @include desktop {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        &:hover {
+                            color: $color-btn-hover;
+                        }
+                    }
+                }
+                .animation-btn {
+                    @include desktop {
+                        &:hover {
+                            -webkit-animation: animation-btn 1s;
+                            animation: animation-btn 1s;
+                        }
+                        @keyframes animation-btn {
+                            0%,
+                            100% {
+                                -webkit-transform: rotate(0deg);
+                                transform: rotate(0deg);
+                                -webkit-transform-origin: 50% 100%;
+                                transform-origin: 50% 100%;
+                            }
+                            10% {
+                                -webkit-transform: rotate(2deg);
+                                transform: rotate(2deg);
+                            }
+                            20%,
+                            40%,
+                            60% {
+                                -webkit-transform: rotate(-4deg);
+                                transform: rotate(-4deg);
+                            }
+                            30%,
+                            50%,
+                            70% {
+                                -webkit-transform: rotate(4deg);
+                                transform: rotate(4deg);
+                            }
+                            80% {
+                                -webkit-transform: rotate(-2deg);
+                                transform: rotate(-2deg);
+                            }
+                            90% {
+                                -webkit-transform: rotate(2deg);
+                                transform: rotate(2deg);
+                            }
+                        }
+                    }
+                }
+                @include tablets {
+                    width: 100%;
+                }
+            }
+            @include desktop {
+                justify-content: space-evenly;
+                width: 60vw;
+            }
+        }
+    }
+}
