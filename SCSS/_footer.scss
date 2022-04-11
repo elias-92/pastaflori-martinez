@@ -36,6 +36,11 @@
                 margin: 1rem;
                 color: $color-white;
             }
+            .fa-facebook {
+                &:hover {
+                    color: $color-facebook;
+                }
+            }
             .fa-instagram {
                 &:hover {
                     color: $color-instagram;

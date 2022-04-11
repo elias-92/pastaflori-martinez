@@ -1,7 +1,11 @@
 .container-fluid {
     .main__tienda {
         background-color: $color-fondo--main;
+        @include tablets {
+            margin-top: 9rem !important;
+        }
         .main__filtro {
+            margin-top: 10rem !important;
             h4 {
                 font-size: 1.8rem;
                 color: $color-white;
@@ -25,7 +29,7 @@
                     background-color: $color-btn;
                     padding: .8rem;
                     text-transform: uppercase;
-                    border-radius: 1rem;
+                    border-radius: map-get($map: $border-radius, $key: br2);
                     border: none;
                     margin: 2rem;
                     @include desktop {
@@ -82,10 +86,9 @@
             }
         }
         .galery__container {
-            display: flex;
+            @include d-col;
             width: 100vw;
             min-width: 280px;
-            flex-direction: column;
             @include tablets {
                 display: flex;
                 width: 70vw;
@@ -97,7 +100,7 @@
             img {
                 width: 100%;
                 height: 40vh;
-                border-radius: 2rem;
+                border-radius: map-get($map: $border-radius, $key: br3);
                 padding: .8rem;
                 @include tablets {
                     height: 27vh;
@@ -114,7 +117,7 @@
                     cursor: pointer;
                     overflow: hidden;
                     &::before {
-                        border-radius: 1.2rem;
+                        border-radius: map-get($map: $border-radius, $key: br4);
                         margin: 0.8rem;
                         content: "Ver mas";
                         position: absolute;

@@ -2,32 +2,37 @@
     .main {
         grid-area: main;
         .presentacion {
+            @include desktop {
+                margin-top: 10rem;
+            }
             .resumen {
                 background-color: $color-grey;
+                margin-top: 7rem;
+                @include tablets {
+                    margin-top: 9rem;
+                }
                 h3 {
                     text-align: center;
-                    padding: 2rem 0;
+                    padding: 2rem;
                     font-size: 2.5rem;
                     color: $color-white;
                 }
                 p {
+                    @extend h3;
                     font-size: 2rem;
-                    color: $color-white;
-                    padding: 2rem;
                     text-align: justify;
                 }
                 @include desktop {
                     width: 30vw;
-                    border-radius: 2rem;
+                    border-radius: map-get($map: $border-radius, $key: br3);
                     padding: .8rem;
                     margin: .8rem;
                 }
             }
             .imgBodas {
-                display: flex;
+                @include d-col;
                 width: 100vw;
                 min-width: 280px;
-                flex-direction: column;
                 align-items: center;
                 @include tablets {
                     @include d-row;
@@ -42,7 +47,7 @@
                     @include tablets {
                         width: 50vw;
                         height: 60vh;
-                        border-radius: 2rem;
+                        border-radius: map-get($map: $border-radius, $key: br3);
                         padding: .8rem;
                     }
                     @include desktop {
@@ -64,7 +69,7 @@
                     img {
                         width: 40vw;
                         height: 80vh;
-                        border-radius: 2rem;
+                        border-radius: map-get($map: $border-radius, $key: br3);
                         padding: 1rem;
                     }
                 }
@@ -84,14 +89,12 @@
             }
         }
         .textForm {
-            display: flex;
-            flex-direction: column;
+            @include d-col;
             align-items: center;
             min-width: 280px;
             background-color: $color-fondo--main;
             @include tablets {
-                display: flex;
-                flex-direction: column;
+                @include d-col;
                 justify-content: space-evenly;
                 width: 60vw;
             }
@@ -137,7 +140,7 @@
                     background-color: $color-btn;
                     color: $color-white;
                     cursor: pointer;
-                    border-radius: 2rem;
+                    border-radius: map-get($map: $border-radius, $key: br3);
                     @include desktop {
                         font-size: 2rem;
                         font-weight: 600;

@@ -3,6 +3,12 @@
         grid-area: main;
         background-color: $color-fondo--main;
     }
+    #carouselExampleCaptions {
+        margin-top: 9rem !important;
+        @include tablets {
+            margin-top: 13rem !important;
+        }
+    }
     .carousel-item {
         .carousel-caption {
             .color {
