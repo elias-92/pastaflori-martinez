@@ -1,7 +1,7 @@
 {
     "name": "pastaflori-martinez",
     "version": "1.0.0",
-    "description": "",
+    "description": "Página web orientada a la venta de tortas para cumpleanos, bodas, eventos.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
