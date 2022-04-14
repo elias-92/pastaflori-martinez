@@ -3,11 +3,11 @@
         grid-area: main;
     }
     .main__nosotros {
-        margin-top: 8rem;
+        margin-top: 6rem;
         @include tablets {
             @include d-col;
             width: 100vw;
-            margin-top: 9rem;
+            margin-top: 8rem;
         }
         @include desktop {
             flex-direction: row;

@@ -11,6 +11,7 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 .container-fluid {
+  padding: 0 !important;
   overflow: hidden;
   min-width: 280px;
   display: grid;
@@ -18,7 +19,8 @@ body {
   grid-template-areas: "menu" "title" "main" "footer"; }
 
 .container-fluid .logo {
-  width: 100px; }
+  width: 9rem;
+  padding-left: 1rem; }
   @media (min-width: 768px) {
     .container-fluid .logo {
       width: 150px; } }
@@ -82,7 +84,7 @@ body {
   position: fixed;
   right: 2.5rem;
   bottom: 1rem;
-  z-index: 1; }
+  z-index: 100000000; }
   .container-fluid .wsp img {
     width: 100%; }
 
@@ -102,6 +104,7 @@ body {
     width: 97vw;
     height: 30vh;
     margin: 2rem 0;
+    margin-left: .3rem;
     animation-name: animacion;
     animation-duration: 12s;
     animation-delay: .5s;
@@ -134,7 +137,8 @@ body {
       display: flex;
       flex-direction: column;
       text-align: center;
-      margin-bottom: 6rem; }
+      margin-bottom: 6rem;
+      margin-left: .8rem; }
       .container-fluid .miniGaleria .miniGaleria__content h2 {
         font-size: 4rem;
         margin-bottom: 1.5rem;
@@ -179,7 +183,8 @@ body {
     text-align: center;
     margin: .5rem; }
   .container-fluid .footer .footer__nav ul {
-    list-style-type: none; }
+    list-style-type: none;
+    padding: 0; }
     .container-fluid .footer .footer__nav ul li {
       margin: .6rem;
       border-bottom: 1px solid #fff; }
@@ -234,7 +239,7 @@ body {
   background-color: #d1d1d2; }
   @media (min-width: 768px) {
     .container-fluid .main__tienda {
-      margin-top: 9rem !important; } }
+      margin-top: 8rem !important; } }
   .container-fluid .main__tienda .main__filtro {
     margin-top: 10rem !important; }
     .container-fluid .main__tienda .main__filtro h4 {
@@ -532,13 +537,13 @@ body {
   grid-area: main; }
 
 .container-fluid .main__nosotros {
-  margin-top: 8rem; }
+  margin-top: 6rem; }
   @media (min-width: 768px) {
     .container-fluid .main__nosotros {
       display: flex;
       flex-direction: column;
       width: 100vw;
-      margin-top: 9rem; } }
+      margin-top: 8rem; } }
   @media (min-width: 992px) {
     .container-fluid .main__nosotros {
       flex-direction: row; } }
@@ -582,13 +587,13 @@ body {
   grid-area: main; }
 
 .container-fluid .main__encuentranos {
-  margin-top: 9rem; }
+  margin-top: 6rem; }
   @media (min-width: 768px) {
     .container-fluid .main__encuentranos {
       height: 50vh;
-      margin-top: 10rem; } }
+      margin-top: 8rem; } }
   .container-fluid .main__encuentranos iframe {
-    height: 30vh;
+    height: 50vh;
     border: none;
     width: 100vw;
     padding: 1rem 2rem 1rem 1rem; }

@@ -13,6 +13,7 @@ body {
 }
 
 .container-fluid {
+    padding: 0 !important;
     overflow: hidden;
     min-width: 280px;
     display: grid;

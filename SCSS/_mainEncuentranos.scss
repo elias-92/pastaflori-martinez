@@ -3,13 +3,13 @@
         grid-area: main;
     }
     .main__encuentranos {
-        margin-top: 9rem;
+        margin-top: 6rem;
         @include tablets {
             height: 50vh;
-            margin-top: 10rem;
+            margin-top: 8rem;
         }
         iframe {
-            height: 30vh;
+            height: 50vh;
             border: none;
             width: 100vw;
             padding: 1rem 2rem 1rem 1rem;

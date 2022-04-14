@@ -1,6 +1,7 @@
 .container-fluid {
     .logo {
-        width: 100px;
+        width: 9rem;
+        padding-left: 1rem;
         @include tablets {
             width: 150px;
         }
