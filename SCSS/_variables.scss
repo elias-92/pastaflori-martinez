@@ -10,6 +10,13 @@ $color-instagram: #c72407;
 $bg-color-imgTienda: #e6c2c8d2;
 $color-facebook: #0c0cec;
 //mixin
+@mixin phones {
+    @media(min-width: 500px) {
+        @content
+    }
+}
+
+;
 @mixin tablets {
     @media (min-width: 768px) {
         @content

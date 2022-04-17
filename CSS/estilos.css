@@ -84,7 +84,7 @@ body {
   position: fixed;
   right: 2.5rem;
   bottom: 1rem;
-  z-index: 100000000; }
+  z-index: 9999999999; }
   .container-fluid .wsp img {
     width: 100%; }
 
@@ -119,14 +119,14 @@ body {
     background: url(../IMG/sliderSecun4.jpg) no-repeat scroll 50% 50%/contain transparent; }
   100% {
     background: url(../IMG/sliderSecun5.jpg) no-repeat scroll 50% 50%/contain transparent; } }
-  @media (min-width: 768px) {
+  @media (min-width: 500px) {
     .animacionMobile {
       display: none; } }
 
 .miniGaleria {
   display: none; }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   .container-fluid .miniGaleria {
     text-align: center;
     display: block;
@@ -241,7 +241,8 @@ body {
     .container-fluid .main__tienda {
       margin-top: 8rem !important; } }
   .container-fluid .main__tienda .main__filtro {
-    margin-top: 10rem !important; }
+    margin-top: 10rem !important;
+    margin: 0 5rem; }
     .container-fluid .main__tienda .main__filtro h4 {
       font-size: 1.8rem;
       color: #fff;
@@ -303,18 +304,24 @@ body {
             transform: rotate(2deg); } } }
     @media (min-width: 768px) {
       .container-fluid .main__tienda .main__filtro {
-        width: 30vw; } }
+        width: 30vw;
+        margin: 0; } }
   .container-fluid .main__tienda .galery__container {
     display: flex;
     flex-direction: column;
     width: 100vw;
     min-width: 280px; }
+    @media (min-width: 500px) {
+      .container-fluid .main__tienda .galery__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; } }
     @media (min-width: 768px) {
       .container-fluid .main__tienda .galery__container {
         display: flex;
+        flex-direction: row;
         width: 70vw;
         min-width: 280px;
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around; } }
     .container-fluid .main__tienda .galery__container img {
@@ -322,14 +329,18 @@ body {
       height: 40vh;
       border-radius: 2rem;
       padding: .8rem; }
+      @media (min-width: 500px) {
+        .container-fluid .main__tienda .galery__container img {
+          height: 50vh;
+          width: 50vw; } }
       @media (min-width: 768px) {
         .container-fluid .main__tienda .galery__container img {
-          height: 27vh;
-          width: 30vw; } }
+          height: 45vh;
+          width: 33vw; } }
       @media (min-width: 992px) {
         .container-fluid .main__tienda .galery__container img {
           height: 40vh;
-          width: 20vw; } }
+          width: 23vw; } }
     @media (min-width: 992px) {
       .container-fluid .main__tienda .galery__container .galery__picture {
         position: relative;

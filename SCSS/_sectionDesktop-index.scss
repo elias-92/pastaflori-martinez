@@ -1,6 +1,6 @@
 .container-fluid {
     .miniGaleria {
-        @include tablets {
+        @include phones {
             text-align: center;
             display: block;
             width: 100vw;

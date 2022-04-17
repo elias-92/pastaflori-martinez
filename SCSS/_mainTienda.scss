@@ -6,6 +6,7 @@
         }
         .main__filtro {
             margin-top: 10rem !important;
+            margin: 0 5rem;
             h4 {
                 font-size: 1.8rem;
                 color: $color-white;
@@ -83,17 +84,21 @@
             }
             @include tablets {
                 width: 30vw;
+                margin: 0;
             }
         }
         .galery__container {
             @include d-col;
             width: 100vw;
             min-width: 280px;
+            @include phones {
+                @include d-row;
+                flex-wrap: wrap;
+            }
             @include tablets {
-                display: flex;
+                @include d-row;
                 width: 70vw;
                 min-width: 280px;
-                flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
@@ -102,13 +107,17 @@
                 height: 40vh;
                 border-radius: map-get($map: $border-radius, $key: br3);
                 padding: .8rem;
+                @include phones {
+                    height: 50vh;
+                    width: 50vw;
+                }
                 @include tablets {
-                    height: 27vh;
-                    width: 30vw;
+                    height: 45vh;
+                    width: 33vw;
                 }
                 @include desktop {
                     height: 40vh;
-                    width: 20vw;
+                    width: 23vw;
                 }
             }
             .galery__picture {
