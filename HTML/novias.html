@@ -5,20 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="../CSS/estilos.css">
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
     <title>Novias - Pastaflori</title>
-    <meta property="og:keywords" content="tortas, boda">
-    <meta property="og:type" content="article">
+    <meta name="keywords" content="tortas, boda">
+    <meta name="type" content="article">
     <meta property="og:title" content="Novias - Pastaflori">
-    <meta property="og:description" content="Aquí vas a poder completar un formulario y ver nuestro catálogo de las mejores tortas para tu boda">
+    <meta name="description" content="Aquí vas a poder completar un formulario y ver nuestro catálogo de las mejores tortas para tu boda">
     <meta property="og:site_name" content="Pastaflori">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Elias Martinez">
+    <meta name="copyright" content="Pastaflori S.A">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../IMG/logo-pastaflori.png" />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="../CSS/estilos.css">
 </head>
 
 <body>
@@ -57,9 +66,19 @@
 
         <!-- -------------------------- articulo pricipal -------------------------- -->
 
-        <div class="title">
+        <div class="title-breadcrumb">
             <h1>Novias</h1>
+            <!-- start breadcrumbs -->
+            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"> / Novias</li>
+                </ol>
+            </nav>
+            <!-- end breadcrumbs -->
         </div>
+
+
         <main class="main">
             <article class="presentacion">
                 <section class="resumen">
@@ -101,7 +120,7 @@
                         <label for="fecha">Fecha de matrimonio:</label>
                         <input type="date" name="fecha" id="fecha">
 
-                        <input class="animation-btn" type="submit" value="DESCARGAR CATALOGO">
+                        <input class="animation-btn" type="button" value="DESCARGAR CATÁLOGO">
 
                     </form>
                 </section>

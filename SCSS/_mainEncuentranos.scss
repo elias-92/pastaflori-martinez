@@ -3,10 +3,8 @@
         grid-area: main;
     }
     .main__encuentranos {
-        margin-top: 6rem;
         @include tablets {
             height: 50vh;
-            margin-top: 8rem;
         }
         iframe {
             height: 50vh;
@@ -30,13 +28,14 @@
                 width: 100%;
                 margin: .5rem 0;
                 font-size: 1.5rem;
-                color: $color-white;
+                color: $text-main;
+                font-weight: 600;
             }
             label {
                 font-size: 1.5rem;
                 text-transform: uppercase;
             }
-            input:not([type="submit"]),
+            input:not([type="button"]),
             textarea {
                 border: none;
                 border-bottom: 3px solid $color-btn;
@@ -45,19 +44,22 @@
                 outline: none;
                 background-color: transparent;
             }
-            input[type="submit"] {
-                border: none;
-                padding: 1rem;
-                font-size: 1.5rem;
-                background-color: $color-btn;
-                color: $color-white;
-                cursor: pointer;
-                border-radius: map-get($map: $border-radius, $key: br3);
-                @include desktop {
-                    font-size: 2rem;
-                    font-weight: 600;
-                    &:hover {
-                        color: $color-btn-hover;
+            a {
+                text-decoration: none;
+                input[type="button"] {
+                    border: none;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    background-color: $color-btn;
+                    color: $text-main;
+                    cursor: pointer;
+                    border-radius: map-get($map: $border-radius, $key: br3);
+                    @include desktop {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        &:hover {
+                            color: $color-btn-hover;
+                        }
                     }
                 }
             }
@@ -114,6 +116,7 @@
             @include d-row;
             justify-content: space-between;
             padding: 0 2rem;
+            height: auto;
         }
         @include desktop {
             height: 80vh;

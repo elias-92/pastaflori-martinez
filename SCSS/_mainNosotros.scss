@@ -3,11 +3,9 @@
         grid-area: main;
     }
     .main__nosotros {
-        margin-top: 6rem;
         @include tablets {
             @include d-col;
             width: 100vw;
-            margin-top: 8rem;
         }
         @include desktop {
             flex-direction: row;
@@ -20,11 +18,11 @@
                 font-size: 4rem;
                 margin-bottom: 1rem;
                 text-align: center;
-                color: $color-white;
+                color: $text-main;
             }
             p {
                 font-size: 2rem;
-                color: $color-white;
+                color: $text-main;
                 padding: 2rem;
                 text-align: justify;
                 @include desktop {

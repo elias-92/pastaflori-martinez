@@ -1,4 +1,10 @@
+// Animacion que aparece cuando esta en mobile
+.mobile {
+    grid-area: mobile;
+}
+
 .animacionMobile {
+    min-width: 280px;
     text-align: center;
     padding-top: 5rem;
     background-color: $color-fondo--main;
@@ -13,6 +19,7 @@
         color: $color-darkGrey;
     }
     .animacion {
+        min-width: 280px;
         width: 97vw;
         height: 30vh;
         margin: 2rem 0;
